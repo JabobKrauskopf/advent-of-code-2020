@@ -7,7 +7,9 @@ right = 3
 down = 1
 
 for row in data:
-    new_row = [False if character == "." else True for character in row[:(len(row) - 1)]]
+    new_row = [
+        False if character == "." else True for character in row[: (len(row) - 1)]
+    ]
     matrix.append(new_row)
 
 # Part One
