@@ -48,10 +48,15 @@ print(occurences)
 
 
 def count_children(rule: str) -> int:
-    counter = 1
-    for children in rules[rule]["child_rules"]:
-        counter += rules[rule]["child_rules"][children] * count_children(children)
-    return counter
+    return (
+        sum(
+            [
+                rules[rule]["child_rules"][children] * count_children(children)
+                for children in rules[rule]["child_rules"]
+            ]
+        )
+        + 1
+    )
 
 
 print(count_children("shiny gold") - 1)
