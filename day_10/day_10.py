@@ -1,7 +1,6 @@
 with open("day_10/input.txt", "r") as myfile:
     data = [int(x) for x in myfile.readlines()]
 
-
 data.append(max(data) + 3)
 data.append(0)
 sorted_data = sorted(data)
