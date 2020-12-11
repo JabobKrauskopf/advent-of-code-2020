@@ -28,11 +28,11 @@ def check_possibilities(index):
         base = sorted_data[index]
         for index2 in range(3):
             try:
-                if abs(sorted_data[index+index2+1] - base) <= 3:
-                    if (cache[index+index2+1] == -1):
-                        value = check_possibilities(index+index2+1)
-                        cache[index+index2+1] = value
-                    possibilities += cache[index+index2+1]
+                if abs(sorted_data[index + index2 + 1] - base) <= 3:
+                    if cache[index + index2 + 1] == -1:
+                        value = check_possibilities(index + index2 + 1)
+                        cache[index + index2 + 1] = value
+                    possibilities += cache[index + index2 + 1]
             except IndexError:
                 pass
     return possibilities
