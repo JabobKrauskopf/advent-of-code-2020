@@ -2,10 +2,7 @@ with open("day_5/input.txt", "r") as myfile:
     rows = [x.replace("\n", "") for x in myfile.readlines()]
 
 seat_ids = [
-    int(
-        x.replace("B", "1").replace("R", "1").replace("F", "0").replace("L", "0"),
-        2,
-    )
+    int(x.replace("B", "1").replace("R", "1").replace("F", "0").replace("L", "0"), 2,)
     for x in rows
 ]
 
