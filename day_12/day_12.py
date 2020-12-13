@@ -3,7 +3,9 @@ import regex
 with open("day_12/input.txt", "r") as myfile:
     commands = [
         {"direction": x.group("direction"), "argument": int(x.group("argument"))}
-        for x in list(regex.finditer(r"(?P<direction>[^\d])(?P<argument>\d+)", myfile.read()))
+        for x in list(
+            regex.finditer(r"(?P<direction>[^\d])(?P<argument>\d+)", myfile.read())
+        )
     ]
 
 # Part One
@@ -46,7 +48,7 @@ relative_position = [10, 1]
 
 def sin(angle):
     value = 0
-    if abs(angle) == 90 :
+    if abs(angle) == 90:
         value = 1
     if abs(angle) == 270:
         value = -1
