@@ -19,3 +19,5 @@ for element in data:
                 for third_element in data:
                     if first_sum + third_element == 2020:
                         print(element * second_element * third_element)
+                        break
+                break

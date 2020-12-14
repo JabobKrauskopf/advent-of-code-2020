@@ -1,7 +1,7 @@
 import regex
 from functools import reduce
 
-with open("day_14/input.txt", "r") as myfile:
+with open("day_13/input.txt", "r") as myfile:
     data = myfile.readlines()
 
 # Part One
