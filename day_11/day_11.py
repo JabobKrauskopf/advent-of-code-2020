@@ -115,7 +115,7 @@ def simulate(function, data, occupied_count_limit):
                     index_y,
                     data,
                     function(index_x, index_y, data),
-                    occupied_count_limit
+                    occupied_count_limit,
                 )
                 for index_y in range(len(data[0]))
                 for index_x in range(len(data[0][index_y]))
